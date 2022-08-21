@@ -30,14 +30,14 @@
                 <div class="tempinformation">
                     <div class="top_layer">
                         <p id="day">Tuesday</p>
-                        <p id="today_data">13 OCT</p>
+                        <p id="today_date">13 OCT</p>
                     </div>
                     <div class="main_layer">
                         <p id="city_name">Get Output Here</p>
                         <div class="middle_layer data_hide">
                               <p id="temp"><span id="temp_real_val">0</span><sup>o</sup>C</p>
                               <p id="temp_status">
-                                {{!-- <i class="fa-solid fa-cloud"></i> --}}
+                                <i class="fa-solid fa-cloud"></i>
                               </p>
                         </div>
                     </div>
@@ -71,6 +71,28 @@
  day.innerText = days;
 };
 getCurrentDay();
+const getCurrrentTime = () =>{
+    let months = ["Jan","Feb","Mar","Apr","May","June","July","Aug","Sep", "Oct", "Nov", "Dec"];
+    let now = new Date();
+    let month = months[now.getMonth()];
+    let date = now.getDate();
+    let hours = now.getHours();
+    let mins = now.getMinutes();
+
+    let perios = "AM";
+    if(hours > 12){
+        hours = hours - 12;
+        perios = "PM"
+    }else {
+        perios = "AM"
+    }
+    if(mins<10){
+        mins-"0" + mins;
+    }
+    return `${month} ${date} | ${hours}:${mins} ${perios}`
+}
+const today_date = document.getElementById('today_date');
+today_date.innerHTML = getCurrrentTime();
    </script>
     <!-- Optional JavaScript; choose one of the two! -->
 

@@ -156,14 +156,15 @@ body{
 .top_layer p{
     color: #fff;
     font-weight: 300;
-    padding: 2rem 0;
+    font-size: 18px;
+    padding: 2rem 2rem;
 }
 .main_layer{
     width: 100%;
     height: 80%;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 3rem;
 }
 .main_layer #city_name{
     padding: 2rem 0;
@@ -201,7 +202,9 @@ sup{
 
 }
 /* footer styling */
-footer p{width: 100%;
+footer{
+
+    width: 100%;
     background-color: var(--main-bg);
     margin-top: auto;    
 }
@@ -219,7 +222,7 @@ footer p{
     }
     .main_header_right{
         height: auto;
-        margin-top: 3rem 0;
+        margin-top: 3rem;
     }
 }
 .temp_form {
@@ -228,5 +231,11 @@ footer p{
 .tempinformation{
     width: auto;
 }
-
+.main_layer .middle_layer p,
+.main_layer .middle_layer .fa{
+    font-size: 5rem;
+}
+sup{
+    font-size: 4rem;
+}
 /* responsive code */
